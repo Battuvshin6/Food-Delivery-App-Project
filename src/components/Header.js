@@ -8,7 +8,7 @@ class Header extends Component {
       <div className="nav-section row" id="nav-section">
         <Navbar expand="md" className="">
           <Container fluid id="container">
-            <div className="nav-logo col-sm-6 order-sm-2">
+            <div className="nav-logo col-sm-6 order-sm-2 col-md-3 order-md-first col-1">
               <Navbar.Brand href="/" className="logo-brand" id="logo-brand">
                 <img src="/images/logo.svg" alt="logo" />
                 <span className="logo-title">Food Delivery</span>
@@ -29,8 +29,7 @@ class Header extends Component {
             </Navbar.Toggle>
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="nav-menu d-flex w-100 justify-content-around"
-                className="nav-menu"
+                className="nav-menu d-flex w-100 justify-content-around col-6"
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
@@ -41,7 +40,7 @@ class Header extends Component {
                 <a href="#action2">ХҮРГЭЛТИЙН БҮС</a>
               </Nav>
             </Navbar.Collapse>
-            <div className="search">
+            <div className="search col-3">
               <input type="text" name="search" id="search" placeholder="Хайх" />
             </div>
             <div className="btn-div col-sm-3 order-sm-4" id="btn-div">

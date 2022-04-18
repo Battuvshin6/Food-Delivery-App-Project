@@ -56,6 +56,9 @@
 .login-btn img {
   padding-right: 10px;
 }
+.search-btn img {
+  display: none;
+}
 /* Small Devices */
 @media only screen and (max-width: 576px) {
   .search,
@@ -68,9 +71,11 @@
   }
 }
 /* Tablets */
-@media only screen and (min-width: 577px) {
+@media only screen and (max-width: 992px) {
+  #nav-section {
+    margin: 0;
+  }
   .search,
-  .search-btn img,
   #btn-div p {
     display: none;
   }
