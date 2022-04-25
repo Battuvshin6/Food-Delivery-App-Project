@@ -59,11 +59,25 @@
 .search-btn img {
   display: none;
 }
+.basket-btn,
+.login-btn {
+  display: flex;
+  align-self: center;
+  color: rgb(241, 114, 40);
+}
+.login-btn img {
+  padding-left: 10px;
+}
+.login-btn a,
+.basket-btn a {
+  text-decoration: none;
+  color: rgb(241, 114, 40);
+}
 /* Small Devices */
 @media only screen and (max-width: 576px) {
   .search,
   .search-btn img,
-  #btn-div p {
+  #btn-div a {
     display: none;
   }
   #nav-section {
@@ -76,7 +90,7 @@
     margin: 0;
   }
   .search,
-  #btn-div p {
+  #btn-div a {
     display: none;
   }
 } ;

@@ -46,15 +46,19 @@ class Header extends Component {
             <div className="btn-div col-sm-3 order-sm-4" id="btn-div">
               <button type="submit" className="search-btn">
                 <img src="/images/search.svg" alt="search" />
-                <p></p>
+                <a></a>
               </button>
               <button type="submit" className="basket-btn">
-                <img src="/images/basket.svg" alt="" />
-                <p>Сагс</p>
+                <a href="#">
+                  <img src="/images/basket.svg" alt="" />
+                  Сагс
+                </a>
               </button>
               <button type="submit" className="login-btn">
-                <img src="/images/login.svg" alt="" />
-                <p>Нэвтрэх</p>
+                <a href="/Login.js">
+                  <img src="/images/login.svg" alt="" />
+                  Нэвтрэх
+                </a>
               </button>
             </div>
           </Container>

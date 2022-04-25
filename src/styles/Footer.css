@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,600;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.main-footer {
+  background: url("/public/images/base.png") no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  padding: 31px 20px 65px 10px;
+}
+
+.main-footer hr {
+  background-color: white;
+  width: auto;
+}
+
+.top-items {
+  display: flex;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.top-items p {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.main-footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-footer ul li {
+  list-style: none;
+  color: #fff;
+}
+
+.bottom-part {
+  font-size: 12px;
+}
+
+.bottom-items {
+  font-weight: 400;
+  line-height: 30px;
+  /* text-align: left; */
+}
+
+.bottom-items a {
+  text-decoration: none;
+  color: #fff;
+  /* text-align: justify; */
+}
+
+.copyright p {
+  color: #fff;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.join-us p {
+  color: #fff;
+  /* display: none; */
+}
+
+.bottom-container img {
+  display: flex;
+}
+
+.social-logos {
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-evenly;
+}
+
+.social-logos .logos {
+  display: flex;
+  padding: 5px 5px;
+}
+
+.logos {
+  text-align: center;
+}
+
+.logos a {
+  padding: 5px;
+}
+
+.secondrow-left ul {
+  padding-left: 25px;
+  line-height: 2rem;
+}
+
+.secondrow-right ul {
+  padding-left: 0px 0px;
+}
+
+.phone-numbers {
+  font-weight: lighter;
+  line-height: 2rem;
+}
+
+.terms-service {
+  /* display: flex; */
+  justify-content: space-evenly;
+  padding: 0;
+}
+
+.bottom-paragraphs {
+  /* margin-top: 2rem; */
+  line-height: 32px;
+}
+
+.last-paragraph {
+  display: flex;
+  color: #fff;
+  text-align: end;
+}
