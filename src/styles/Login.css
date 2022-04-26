@@ -56,8 +56,22 @@
   justify-content: center;
   flex-direction: row;
   width: 360px;
+  margin: 10px 0;
 }
 .or-btn {
   color: grey;
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+#register-btn{
+  display: flex;
+  border: 10px solid #f17228;
+  background-color: #f17228;
+  color: white;
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: row;
+  width: 360px;
+  margin-top: 10px;
 }

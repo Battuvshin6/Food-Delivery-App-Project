@@ -42,7 +42,7 @@ export default function Login() {
             <a href="#" className="or-btn">
               эсвэл
             </a>
-            <button type="submit" className="register-btn">
+            <button type="submit" className="register-btn" id="register-btn">
               БҮРТГҮҮЛЭХ
             </button>
           </ol>
