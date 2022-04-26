@@ -1,36 +1,54 @@
 import React from "react";
-// import ForgotPassword from "./contents/ForgotPassword";
-// import Register from "./contents/Register";
-// import UserProfile from "./contents/UserProfile";
-// import { Route, Routes } from "react-router-dom";
-// import NotFound from "./NotFound";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../styles/Login.css";
 export default function Login() {
   return (
     <>
-      <div className="login-section">
-        <h1>
-          <img src="/images/line.svg" alt="" />
-          НЭВТРЭХ
-        </h1>
-        <form>
-          <label htmlFor="mail">И-мэйл</label>
-          <input type="text" name="mail" id="mail" />
-          <label htmlFor="pwd">Нууц үг</label>
-          <input type="password" name="pwd" id="pwd" />
-        </form>
-        <p>Нууц үгээ мартсан?</p>
+      <Header />
+      <div className="login-div" id="login">
+        <div className="login-section">
+          <ol className="ordering-position">
+            <li>
+              <h1>
+                <img src="/images/line.svg" alt="" />
+                НЭВТРЭХ
+              </h1>
+              <form>
+                <label htmlFor="mail">И-мэйл</label>
+                <br />
+                <input
+                  type="text"
+                  name="mail"
+                  id="mail"
+                  placeholder="И-мэйл хаягаа оруулна уу."
+                />
+                <br />
+                <label htmlFor="pwd">Нууц үг</label>
+                <br />
+                <input
+                  type="password"
+                  name="pwd"
+                  id="pwd"
+                  placeholder="Нууц үгээ оруулна уу."
+                />
+              </form>
+              <a className="login-anchor">Нууц үгээ мартсан?</a>
+            </li>
+
+            <button type="submit" className="log-btn" id="log-btn">
+              НЭВТРЭХ
+            </button>
+            <a href="#" className="or-btn">
+              эсвэл
+            </a>
+            <button type="submit" className="register-btn">
+              БҮРТГҮҮЛЭХ
+            </button>
+          </ol>
+        </div>
       </div>
-      <div className="btn-div">
-        <button type="submit">НЭВТРЭХ</button>
-        <a href="#">эсвэл</a>
-        <button type="submit">БҮРТГҮҮЛЭХ</button>
-      </div>
-      {/* <Routes>
-        <Route path="userprofile" element={<UserProfile />}></Route>
-        <Route path="register" element={<Register />}></Route>
-        <Route path="forgotpassword" element={<ForgotPassword />}></Route>
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes> */}
+      <Footer />
     </>
   );
 }

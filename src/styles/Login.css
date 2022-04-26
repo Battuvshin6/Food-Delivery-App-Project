@@ -1,0 +1,63 @@
+.login-section {
+  display: inline-block;
+  margin: 0 40rem 10rem 40rem;
+  justify-content: center;
+}
+.login-section h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.login-section img {
+  padding-right: 5px;
+}
+#mail {
+  display: flex;
+  border: #ffd7bf 1px solid;
+  border-radius: 16px;
+  width: 359px;
+  margin-top: 7px;
+  height: 40px;
+}
+#mail::placeholder {
+  padding-left: 10px;
+}
+#pwd {
+  display: flex;
+  border: #ffd7bf 1px solid;
+  border-radius: 16px;
+  width: 359px;
+  margin-top: 7px;
+  height: 40px;
+}
+#pwd::placeholder {
+  padding-left: 10px;
+}
+.login-anchor {
+  justify-content: flex-end;
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+  padding-left: 13.9rem;
+  font-size: 13px;
+}
+.ordering-position {
+  list-style-type: none;
+}
+.btn-div {
+  display: flex;
+  padding: 50px 0;
+}
+#log-btn {
+  display: flex;
+  border: 10px solid #f17228;
+  background-color: #f17228;
+  color: white;
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: row;
+  width: 360px;
+}
+.or-btn {
+  color: grey;
+  margin: 20px 0;
+}
