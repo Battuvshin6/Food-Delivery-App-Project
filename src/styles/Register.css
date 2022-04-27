@@ -1,0 +1,49 @@
+#register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 0;
+}
+form h1 {
+  display: flex;
+  align-items: center;
+}
+form label {
+  padding-bottom: 10px;
+}
+#name,
+#mail,
+#address,
+#pwd {
+  display: flex;
+  border: #ffd7bf 1px solid;
+  border-radius: 16px;
+  width: 359px;
+  margin-top: 7px;
+  height: 40px;
+}
+#name,
+#mail,
+#address,
+#pwd::placeholder {
+  padding-left: 20px;
+}
+form label {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 18px;
+}
+#tandC input {
+  border: 1px solid #f17228;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 10px;
+  padding-top: 20px;
+}
+#tandC input:checked {
+  background-color: #f17228;
+}
+.tandC {
+  display: flex;
+  justify-content: center;
+}
