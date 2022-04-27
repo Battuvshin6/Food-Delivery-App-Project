@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import "../styles/Header.css";
-
+import Login from "./Login";
 class Header extends Component {
   render() {
     return (
@@ -54,8 +54,8 @@ class Header extends Component {
                   Сагс
                 </a>
               </button>
-              <button type="submit" className="login-btn">
-                <a href="/Login.js">
+              <button type="button" className="login-btn">
+                <a href="#">
                   <img src="/images/login.svg" alt="" />
                   Нэвтрэх
                 </a>

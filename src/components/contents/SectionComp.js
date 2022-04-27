@@ -22,7 +22,7 @@ export default function SectionComp() {
 
   const renderSection = (data) => {
     return (
-      <div>
+      <div key={data.name}>
         <div className="section-container">
           <h6> {data}</h6>
           <button className="section-button">

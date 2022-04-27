@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import Order from "./components/Order";
 import Login from "./components/Login";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 import "./styles/MainComp.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -2,12 +2,11 @@ import React from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 
 const Cards = (props) => {
-  console.log(props.foods);
   let url = "https://mtars-fooddelivery.s3.ap-southeast-1.amazonaws.com";
 
   const renderCard = (card) => {
     return (
-      <Col sm={6} lg={3}>
+      <Col sm={6} lg={3} key={card.name}>
         <Card key={card.category_id}>
           <Card.Img variant="top" src={url + card.image} />
           <Card.Body>
