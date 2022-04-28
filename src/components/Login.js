@@ -45,7 +45,7 @@ export default function Login() {
               эсвэл
             </a>
             <button type="submit" className="register-btn" id="register-btn">
-              <a href="">БҮРТГҮҮЛЭХ </a>
+              <a href="/Register">БҮРТГҮҮЛЭХ </a>
             </button>
           </ol>
         </div>

@@ -29,12 +29,15 @@
   line-height: 24px;
   color: black;
   text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
 }
 #search {
   border-radius: 10px;
   border: 1px solid #fbc5a6;
   background-color: white;
-  width: 15rem;
+  width: 7rem;
 }
 #container {
   padding: 0%;
@@ -56,9 +59,9 @@
 .login-btn img {
   padding-right: 10px;
 }
-.search-btn img {
+/* .search-btn img {
   display: none;
-}
+} */
 .basket-btn,
 .login-btn {
   display: flex;
@@ -73,24 +76,127 @@
   text-decoration: none;
   color: rgb(241, 114, 40);
 }
+.login-img {
+  height: 20px;
+}
 /* Small Devices */
-@media only screen and (max-width: 576px) {
-  .search,
-  .search-btn img,
-  #btn-div a {
-    display: none;
-  }
+@media only screen and (max-width>=576px) {
   #nav-section {
     margin: 0;
+  }
+  .search {
+    display: none;
+  }
+  .basket-ptag,
+  .login-ptag,
+  .basket-img {
+    display: none;
+  }
+  .search-img {
+    display: inline-block;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #nav-section {
+    margin: 0;
+  }
+  .search {
+    display: none;
+  }
+  .basket-ptag,
+  .login-ptag,
+  .basket-img {
+    display: none;
+  }
+  .search-img {
+    display: inline-block;
+  }
+  #nav-logo {
+    justify-content: center;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #nav-section {
+    margin: 0;
+  }
+  .search {
+    display: none;
+  }
+  .basket-ptag,
+  .login-ptag,
+  .basket-img {
+    display: none;
+  }
+  .search-img {
+    display: inline-block;
   }
 }
 /* Tablets */
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 768px) {
   #nav-section {
-    margin: 0;
+    margin: 0 75px;
   }
-  .search,
-  #btn-div a {
+  .search {
     display: none;
   }
-} ;
+  .basket-ptag,
+  .login-ptag {
+    display: none;
+  }
+  .logo-title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+  }
+  .search-btn,
+  .basket-img {
+    display: inline-block;
+  }
+  .basket-img {
+    width: 33px;
+  }
+  .search-btn {
+    padding-right: 10px;
+  }
+  #nav-menu a {
+    padding-right: 10px;
+  }
+}
+/* Large devices */
+@media only screen and (min-width: 992px) {
+  .search {
+    display: inline-block;
+  }
+  #navbarScroll {
+    align-items: center;
+    justify-content: center;
+  }
+  #nav-menu a {
+    padding-right: 10px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #search {
+    width: 10rem;
+  }
+  #navbarScroll {
+    align-items: center;
+    justify-content: center;
+  }
+  #nav-menu a {
+    padding-right: 20px;
+  }
+  .search-img {
+    display: none;
+  }
+  .basket-ptag,
+  .login-ptag {
+    display: inline-block;
+  }
+}
