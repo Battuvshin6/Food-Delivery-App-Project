@@ -8,7 +8,7 @@ export default function Login() {
         <div className="login-section">
           <ol className="ordering-position">
             <li>
-              <h1>
+              <h1 className="login-h1">
                 <img src="/images/line.svg" alt="" />
                 НЭВТРЭХ
               </h1>

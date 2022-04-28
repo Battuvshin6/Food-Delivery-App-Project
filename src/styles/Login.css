@@ -1,9 +1,10 @@
 .login-section {
   display: flex;
-  margin: 10rem 40rem;
   justify-content: center;
   align-items: center;
+  margin: 10rem 40rem 10rem 30rem;
 }
+
 .login-section h1 {
   font-size: 20px;
   font-weight: 700;
@@ -80,4 +81,98 @@
 #register-btn a {
   text-decoration: none;
   color: white;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .login-section {
+    display: inline;
+    margin: 1rem 0 1rem 0;
+  }
+  .login-div {
+    display: flex;
+    justify-content: center;
+  }
+  #register-btn {
+    display: flex;
+    border: 1px solid #f17228;
+    background-color: white;
+    color: #f17228;
+    border-radius: 7px;
+    justify-content: center;
+    flex-direction: row;
+    width: 360px;
+    margin-top: 10px;
+    height: 35px;
+    align-items: center;
+  }
+  #register-btn a {
+    color: #f17228;
+  }
+  #log-btn {
+    margin-top: 25px;
+  }
+  .main-footer {
+    display: none;
+  }
+}
+#log-btn {
+  border-radius: 7px;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .login-section {
+    display: inline;
+    margin: 1rem 0 1rem 0;
+  }
+  .login-div {
+    display: flex;
+    justify-content: center;
+  }
+  #register-btn {
+    display: flex;
+    border: 1px solid #f17228;
+    background-color: white;
+    color: #f17228;
+    border-radius: 7px;
+    justify-content: center;
+    flex-direction: row;
+    width: 360px;
+    margin-top: 10px;
+    height: 35px;
+    align-items: center;
+  }
+  #register-btn a {
+    color: #f17228;
+  }
+  #log-btn {
+    margin-top: 25px;
+  }
+  .main-footer {
+    display: none;
+  }
+}
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  .login-section {
+    display: flex;
+    margin: 3rem 0 15rem 0;
+  }
+  #register-btn {
+    border-radius: 20px;
+  }
+  #log-btn {
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  .main-footer {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .login-section {
+    margin-top: 0;
+  }
+  .login-h1 {
+    margin-bottom: 20px;
+  }
 }

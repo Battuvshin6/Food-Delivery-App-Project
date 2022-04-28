@@ -79,23 +79,7 @@
 .login-img {
   height: 20px;
 }
-/* Small Devices */
-@media only screen and (max-width>=576px) {
-  #nav-section {
-    margin: 0;
-  }
-  .search {
-    display: none;
-  }
-  .basket-ptag,
-  .login-ptag,
-  .basket-img {
-    display: none;
-  }
-  .search-img {
-    display: inline-block;
-  }
-}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #nav-section {
@@ -178,6 +162,9 @@
   }
   #nav-menu a {
     padding-right: 10px;
+  }
+  .search-img {
+    display: none;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
