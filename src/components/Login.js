@@ -1,12 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import "../styles/Login.css";
 
 export default function Login() {
   return (
     <>
-      <Header />
       <div className="login-div" id="login">
         <div className="login-section">
           <ol className="ordering-position">
@@ -23,6 +20,7 @@ export default function Login() {
                   name="mail"
                   id="mail"
                   placeholder="И-мэйл хаягаа оруулна уу."
+                  required
                 />
                 <br />
                 <label htmlFor="pwd">Нууц үг</label>
@@ -32,24 +30,26 @@ export default function Login() {
                   name="pwd"
                   id="pwd"
                   placeholder="Нууц үгээ оруулна уу."
+                  required
                 />
               </form>
-              <a className="login-anchor">Нууц үгээ мартсан?</a>
+              <a href="/ForgotPassword" className="login-anchor">
+                Нууц үгээ мартсан?
+              </a>
             </li>
 
             <button type="submit" className="log-btn" id="log-btn">
-              НЭВТРЭХ
+              <a href="">НЭВТРЭХ</a>
             </button>
             <a href="#" className="or-btn">
               эсвэл
             </a>
             <button type="submit" className="register-btn" id="register-btn">
-              БҮРТГҮҮЛЭХ
+              <a href="">БҮРТГҮҮЛЭХ </a>
             </button>
           </ol>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

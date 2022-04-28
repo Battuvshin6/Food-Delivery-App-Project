@@ -76,3 +76,8 @@
   width: 360px;
   margin-top: 10px;
 }
+#log-btn a,
+#register-btn a {
+  text-decoration: none;
+  color: white;
+}

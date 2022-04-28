@@ -1,11 +1,8 @@
 import React from "react";
-import Header from "../Header";
-import Footer from "../Footer";
 import "../../styles/Register.css";
 export default function Regiser() {
   return (
     <>
-      <Header />
       <div className="register-section" id="register">
         <form>
           <h1 className="">
@@ -19,6 +16,7 @@ export default function Regiser() {
             name="name"
             id="name"
             placeholder="Нэрээ оруулна уу."
+            required
           />
           <br />
           <label htmlFor="mail">И-мэйл</label>
@@ -28,6 +26,7 @@ export default function Regiser() {
             name="mail"
             id="mail"
             placeholder="И-мэйл хаягаа оруулна уу."
+            required
           />
           <br />
           <label htmlFor="address">Нэр</label>
@@ -37,6 +36,7 @@ export default function Regiser() {
             name="address"
             id="address"
             placeholder="Та хаягаа оруулна уу."
+            required
           />
           <br />
           <label htmlFor="pwd">Нууц үг</label>
@@ -46,6 +46,7 @@ export default function Regiser() {
             name="pwd"
             id="pwd"
             placeholder="Нууц үгээ оруулна уу."
+            required
           />
           <br />
           <label htmlFor="pwd">Нууц үг давтах</label>
@@ -55,10 +56,11 @@ export default function Regiser() {
             name="pwd"
             id="pwd"
             placeholder="Нууц үгээ оруулна уу."
+            required
           />
           <br />
           <label htmlFor="tandC" className="tandC">
-            <input type="checkbox" name="tandC" id="tandC" />
+            <input type="checkbox" name="tandC" id="tandC" required />
             Үйлчилгээний нөхцөл зөвшөөрөх
           </label>
           <br />
@@ -67,7 +69,6 @@ export default function Regiser() {
           </button>
         </form>
       </div>
-      <Footer />
     </>
   );
 }

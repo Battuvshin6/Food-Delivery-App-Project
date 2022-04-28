@@ -8,6 +8,8 @@ import Login from "./components/Login";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import "./styles/MainComp.css";
+import Register from "./components/contents/Register";
+import ForgotPassword from "./components/contents/ForgotPassword";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/login/*" element={<Login />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="Register" element={<Register />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
       </Routes>
       <Footer />
     </BrowserRouter>
