@@ -5,7 +5,7 @@ export default function Regiser() {
     <>
       <div className="register-section" id="register">
         <form>
-          <h1 className="">
+          <h1 className="register-h1">
             <img src="/images/line.svg" alt="line" />
             Бүртгүүлэх
           </h1>
@@ -61,7 +61,7 @@ export default function Regiser() {
           <br />
           <label htmlFor="tandC" className="tandC">
             <input type="checkbox" name="tandC" id="tandC" required />
-            Үйлчилгээний нөхцөл зөвшөөрөх
+            <a className="termAndCond">Үйлчилгээний нөхцөл зөвшөөрөх</a>
           </label>
           <br />
           <button type="button" id="register-btn">
