@@ -2,6 +2,9 @@ import React from "react";
 import "../styles/Login.css";
 
 export default function Login() {
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="login-div" id="login">
@@ -12,7 +15,7 @@ export default function Login() {
                 <img src="/images/line.svg" alt="" />
                 НЭВТРЭХ
               </h1>
-              <form>
+              <form onSubmit={submitHandler}>
                 <label htmlFor="mail">И-мэйл</label>
                 <br />
                 <input
@@ -38,7 +41,12 @@ export default function Login() {
               </a>
             </li>
 
-            <button type="submit" className="log-btn" id="log-btn">
+            <button
+              onSubmit={submitHandler}
+              type="submit"
+              className="log-btn"
+              id="log-btn"
+            >
               <a href="">НЭВТРЭХ</a>
             </button>
             <a href="#" className="or-btn">
