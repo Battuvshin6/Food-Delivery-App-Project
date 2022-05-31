@@ -1,6 +1,12 @@
 import React from "react";
 import "../../styles/Register.css";
+import { useNavigate } from "react-router-dom";
+
 export default function Regiser() {
+  const navigate = useNavigate();
+  const toLogin = () => {
+    navigate("/login");
+  };
   return (
     <>
       <div className="register-section" id="register">
@@ -29,7 +35,7 @@ export default function Regiser() {
             required
           />
           <br />
-          <label htmlFor="address">Нэр</label>
+          <label htmlFor="address">Хаяг</label>
           <br />
           <input
             type="text"
@@ -44,7 +50,7 @@ export default function Regiser() {
           <input
             type="password"
             name="pwd"
-            id="pwd"
+            id="password"
             placeholder="Нууц үгээ оруулна уу."
             required
           />
@@ -64,7 +70,7 @@ export default function Regiser() {
             <a className="termAndCond">Үйлчилгээний нөхцөл зөвшөөрөх</a>
           </label>
           <br />
-          <button type="button" id="register-btn">
+          <button onClick={toLogin} type="button" id="register-btn">
             Бүртгүүлэх
           </button>
         </form>

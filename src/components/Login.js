@@ -47,7 +47,7 @@ export default function Login() {
               className="log-btn"
               id="log-btn"
             >
-              <a href="">НЭВТРЭХ</a>
+              <a href="/#">НЭВТРЭХ</a>
             </button>
             <a href="#" className="or-btn">
               эсвэл

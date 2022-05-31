@@ -14,7 +14,8 @@ form label {
 #name,
 #mail,
 #address,
-#pwd {
+#pwd,
+#password {
   display: flex;
   border: #ffd7bf 1px solid;
   border-radius: 16px;
@@ -25,7 +26,8 @@ form label {
 #name,
 #mail,
 #address,
-#pwd::placeholder {
+#pwd::placeholder,
+#password::placeholder {
   padding-left: 20px;
 }
 form label {
