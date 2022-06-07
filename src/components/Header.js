@@ -41,7 +41,7 @@ export default function Header() {
             </Nav>
           </Navbar.Collapse>
           <div className="search col-lg-2">
-            <input type="text" name="search" id="search" placeholder="Хайх" />
+            <input type="text" name="search" id="search" placeholder="" />
           </div>
           <div
             className="btn-div col-sm-3 order-sm-4 col-md-1 col-lg-2"
@@ -73,30 +73,3 @@ export default function Header() {
     </div>
   );
 }
-
-/*<li class="dropdown dropdown-1">
-      TranslateY
-      <ul class="dropdown_menu dropdown_menu-1">
-        <li class="dropdown_item-1">Item 1</li>
-        <li class="dropdown_item-2">Item 2</li>
-        <li class="dropdown_item-3">Item 3</li>
-          <li class="dropdown_item-4">Item 4</li>
-          <li class="dropdown_item-5">Item 5</li>
-      </ul>
-    </li>*/
-/*.dropdown_menu
-   position: absolute
-   top: 100%
-   left: 0
-   width: 100%
-   perspective: 1000px
-   z-index: -1
-   li
-    display: none
-    color: white
-    background-color: #34495e
-    padding: 10px 20px
-    font-size: 16px
-    opacity: 0
-    &:hover
-      background-color: #2980b9 */

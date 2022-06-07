@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import "./styles/MainComp.css";
 import Register from "./components/contents/Register";
 import ForgotPassword from "./components/contents/ForgotPassword";
-import { useState } from "react";
+
 function App() {
   return (
     <BrowserRouter>
