@@ -1,12 +1,12 @@
 import React from "react";
 import "../../styles/Register.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export default function Regiser() {
-  const navigate = useNavigate();
-  const toLogin = () => {
-    navigate("/login");
-  };
+  // const navigate = useNavigate();
+  // // const toLogin = () => {
+  // //   navigate("#");
+  // // };
   return (
     <>
       <div className="register-section" id="register">
@@ -70,7 +70,7 @@ export default function Regiser() {
             <a className="termAndCond">Үйлчилгээний нөхцөл зөвшөөрөх</a>
           </label>
           <br />
-          <button onClick={toLogin} type="button" id="register-btn">
+          <button type="button" id="register-btn">
             Бүртгүүлэх
           </button>
         </form>

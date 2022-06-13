@@ -3,7 +3,33 @@ import "../styles/Login.css";
 
 export default function Login() {
   const submitHandler = (e) => {
+    console.log("loggin submmitted");
     e.preventDefault();
+    fetch("http://localhost:8000/api/user/login", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        email: "123344@gmail.com",
+        password: "1234",
+      }),
+    })
+      .then((response) => response.json())
+
+      .then((data) => {
+        localStorage.setItem("user", JSON.stringify(data.data));
+        localStorage.setItem("token", JSON.stringify(data.token));
+      })
+      .catch((err) => {
+        console.log({
+          data: err,
+        });
+      });
+  };
+  const logOutHandler = () => {
+    localStorage.clear();
   };
   return (
     <>
@@ -21,7 +47,7 @@ export default function Login() {
                 <input
                   type="text"
                   name="mail"
-                  id="mail"
+                  id="login-mail"
                   placeholder="И-мэйл хаягаа оруулна уу."
                   required
                 />
@@ -42,12 +68,12 @@ export default function Login() {
             </li>
 
             <button
-              onSubmit={submitHandler}
+              onClick={(e) => submitHandler(e)}
               type="submit"
               className="log-btn"
               id="log-btn"
             >
-              <a href="/#">НЭВТРЭХ</a>
+              <a href="">НЭВТРЭХ</a>
             </button>
             <a href="#" className="or-btn">
               эсвэл

@@ -10,23 +10,30 @@ import Footer from "./components/Footer";
 import "./styles/MainComp.css";
 import Register from "./components/contents/Register";
 import ForgotPassword from "./components/contents/ForgotPassword";
-
+import React from "react";
+import RegisterContextProvider from "./contexts/RegisterContext";
+import Regiser from "./components/contents/Register";
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="/order/*" element={<Order />} />
-        <Route path="/login/*" element={<Login />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="*" element={<NotFound />} />
-        <Route path="Register" element={<Register />} />
-        <Route path="/ForgotPassword" element={<ForgotPassword />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/order/*" element={<Order />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Regiser />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      <>
+        <RegisterContextProvider></RegisterContextProvider>
+      </>
+    </>
   );
 }
 
