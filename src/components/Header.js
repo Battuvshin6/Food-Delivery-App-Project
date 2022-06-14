@@ -1,7 +1,6 @@
 import React from "react";
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import "../styles/Header.css";
-
 export default function Header() {
   return (
     <div className="nav-section row" id="nav-section">

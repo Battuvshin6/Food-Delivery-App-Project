@@ -3,7 +3,7 @@ import "../../styles/Register.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { userServices } from "../../services/userServices";
-
+import { useUser } from "../../contexts/UserContext";
 export default function Register() {
   const [user, setUser] = useState({});
   const [signUp, setSignUp] = useState({});
@@ -13,17 +13,16 @@ export default function Register() {
     e.preventDefault();
 
     userServices.signUpUser({
-      name: e.target[0].value,
-      password: e.target[4].value,
-      email: e.target[1].value,
-      address: e.target[2].value,
+      name: e.name,
+      password: e.password,
+      email: e.email,
+      address: e.address,
     });
 
-    if (!localStorage.getItem("data")) {
-      navigate({ pathname: "/login" });
-      window.location.reload(true);
-    }
-    console.log(e.target[4].value);
+    // if (!localStorage.getItem("data")) {
+    //   navigate({ pathname: "/register" });
+    //   window.location.reload(false);
+    // }
   };
   return (
     <>
@@ -88,7 +87,7 @@ export default function Register() {
             <a className="termAndCond">Үйлчилгээний нөхцөл зөвшөөрөх</a>
           </label>
           <br />
-          <button type="button" id="register-btn">
+          <button type="submit" id="register-btn">
             Бүртгүүлэх
           </button>
         </form>

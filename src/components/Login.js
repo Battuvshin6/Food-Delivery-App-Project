@@ -1,15 +1,12 @@
 import React from "react";
 import "../styles/Login.css";
-import { useUser } from "../contexts/UserContext";
+// import { useUser } from "../contexts/UserContext";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { userServices } from "../services/userServices";
 export default function Login() {
   const [user, setUser] = useState();
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     fetch("http://localhost:8000/api/user/login", {
@@ -28,7 +25,9 @@ export default function Login() {
         if (data.success) {
           localStorage.setItem("user", JSON.stringify(data.data));
           localStorage.setItem("token", JSON.stringify(data.token));
-          handleClose();
+          navigate("/");
+        } else if (!data.success === false) {
+          console.log('status: "Нууц үг нэр хоорондоо таарахгүй байна."');
         } else {
           console.log(user);
         }
