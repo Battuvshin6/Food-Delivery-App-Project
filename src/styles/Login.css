@@ -87,6 +87,15 @@
     display: inline;
     margin: 1rem 0 1rem 0;
   }
+  #login-mail {
+    display: flex;
+    border: #ffd7bf 1px solid;
+    border-radius: 16px;
+    width: 359px;
+    margin-top: 7px;
+    height: 40px;
+    padding-left: 20px;
+  }
   .login-div {
     display: flex;
     justify-content: center;

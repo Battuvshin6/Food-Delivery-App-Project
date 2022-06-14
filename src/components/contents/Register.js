@@ -1,16 +1,34 @@
 import React from "react";
 import "../../styles/Register.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { userServices } from "../../services/userServices";
 
-export default function Regiser() {
-  // const navigate = useNavigate();
-  // // const toLogin = () => {
-  // //   navigate("#");
-  // // };
+export default function Register() {
+  const [user, setUser] = useState({});
+  const [signUp, setSignUp] = useState({});
+  const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    userServices.signUpUser({
+      name: e.target[0].value,
+      password: e.target[4].value,
+      email: e.target[1].value,
+      address: e.target[2].value,
+    });
+
+    if (!localStorage.getItem("data")) {
+      navigate({ pathname: "/login" });
+      window.location.reload(true);
+    }
+    console.log(e.target[4].value);
+  };
   return (
     <>
       <div className="register-section" id="register">
-        <form>
+        <form onSubmit={submitHandler}>
           <h1 className="register-h1">
             <img src="/images/line.svg" alt="line" />
             Бүртгүүлэх

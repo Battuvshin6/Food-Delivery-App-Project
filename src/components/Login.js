@@ -1,9 +1,16 @@
 import React from "react";
 import "../styles/Login.css";
-
+import { useUser } from "../contexts/UserContext";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { userServices } from "../services/userServices";
 export default function Login() {
+  const [user, setUser] = useState();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const submitHandler = (e) => {
-    console.log("loggin submmitted");
     e.preventDefault();
     fetch("http://localhost:8000/api/user/login", {
       headers: {
@@ -16,21 +23,18 @@ export default function Login() {
         password: "1234",
       }),
     })
-      .then((response) => response.json())
-
+      .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("user", JSON.stringify(data.data));
-        localStorage.setItem("token", JSON.stringify(data.token));
-      })
-      .catch((err) => {
-        console.log({
-          data: err,
-        });
+        if (data.success) {
+          localStorage.setItem("user", JSON.stringify(data.data));
+          localStorage.setItem("token", JSON.stringify(data.token));
+          handleClose();
+        } else {
+          console.log(user);
+        }
       });
   };
-  const logOutHandler = () => {
-    localStorage.clear();
-  };
+
   return (
     <>
       <div className="login-div" id="login">
