@@ -11,18 +11,15 @@ export default function Register() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     userServices.signUpUser({
-      name: e.name,
-      password: e.password,
-      email: e.email,
-      address: e.address,
+      name: e.target[0].value,
+      email: e.target[1].value,
+      phone: e.target[2].value,
+      address: e.target[3].value,
+      password: e.target[4].value,
     });
-
-    // if (!localStorage.getItem("data")) {
-    //   navigate({ pathname: "/register" });
-    //   window.location.reload(false);
-    // }
+    navigate({ pathname: "/login" });
+    window.location.reload(true);
   };
   return (
     <>
@@ -49,6 +46,16 @@ export default function Register() {
             name="mail"
             id="mail"
             placeholder="И-мэйл хаягаа оруулна уу."
+            required
+          />
+          <br />
+          <label htmlFor="phone">Утас</label>
+          <br />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Утасны дугаараа оруулна уу."
             required
           />
           <br />

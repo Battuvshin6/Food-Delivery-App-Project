@@ -1,5 +1,5 @@
 const loginUser = (props) => {
-  fetch("http://localhost:8000/api/user/login", {
+  return fetch("http://localhost:8000/api/user/login", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -13,15 +13,17 @@ const loginUser = (props) => {
 };
 
 const signUpUser = (props) => {
-  fetch("http://localhost:8000/api/user/register", {
+  return fetch("http://localhost:8000/api/user/register", {
     method: "POST",
     headers: {
+      Accept: "application/json",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: props.email,
-      password: props.password,
       name: props.name,
+      email: props.email,
+      phone: props.phone,
+      password: props.password,
       address: props.address,
     }),
   });

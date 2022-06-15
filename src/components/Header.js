@@ -1,7 +1,12 @@
 import React from "react";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { useUser } from "../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 export default function Header() {
+  const navigate = useNavigate();
+  // const [user, setUser] = useUser();
+
   return (
     <div className="nav-section row" id="nav-section">
       <Navbar expand="md" className="">
