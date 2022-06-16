@@ -7,7 +7,7 @@ import "../styles/Header.css";
 import { useState } from "react";
 export default function Header() {
   const navigate = useNavigate();
-  const user = useUser();
+  const [user, setUser] = useUser();
   const [screenSize, setScreenSize] = useState();
   const localClear = () => {
     localStorage.clear();
