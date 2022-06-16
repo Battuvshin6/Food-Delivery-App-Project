@@ -1,12 +1,19 @@
 import React from "react";
+import Login from "./Login";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { useUser } from "../contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
+import { useState } from "react";
 export default function Header() {
   const navigate = useNavigate();
-  // const [user, setUser] = useUser();
-
+  const user = useUser();
+  const [screenSize, setScreenSize] = useState();
+  const localClear = () => {
+    localStorage.clear();
+    navigate("/");
+    window.location.reload(true);
+  };
   return (
     <div className="nav-section row" id="nav-section">
       <Navbar expand="md" className="">
@@ -65,12 +72,27 @@ export default function Header() {
                 <p className="basket-ptag">Сагс</p>
               </a>
             </button>
-            <button type="button" className="login-btn">
-              <a href="/login">
-                <img src="/images/login.svg" alt="" className="login-img" />
-                <p className="login-ptag"> Нэвтрэх</p>
-              </a>
-            </button>
+            {!user ? (
+              screenSize < 992 ? (
+                <button type="submit" className="login-btn">
+                  <a href="/login">
+                    <img src="/images/login.svg" alt="" className="login-img" />
+                    <p className="login-ptag"> Нэвтрэх</p>
+                  </a>
+                </button>
+              ) : (
+                <Login />
+              )
+            ) : (
+              <NavDropdown title={user.name} id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.2">
+                  Миний булан
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Тохиргоо</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={localClear}>Гарах</NavDropdown.Item>
+              </NavDropdown>
+            )}
           </div>
         </Container>
       </Navbar>
