@@ -1,13 +1,13 @@
 import React from "react";
 import Login from "./Login";
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
-import { useUser } from "../contexts/UserContext";
+import { useUser } from "./contexts/UserContext";
 import { useNavigate } from "react-router-dom";
 import "../styles/Header.css";
 import { useState } from "react";
 export default function Header() {
   const navigate = useNavigate();
-  const [user, setUser] = useUser();
+  const user = useUser();
   const [screenSize, setScreenSize] = useState();
   const localClear = () => {
     localStorage.clear();

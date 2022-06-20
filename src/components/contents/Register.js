@@ -1,12 +1,8 @@
 import React from "react";
 import "../../styles/Register.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { userServices } from "../../services/userServices";
-import { useUser } from "../../contexts/UserContext";
 export default function Register() {
-  const [user, setUser] = useState({});
-  const [signUp, setSignUp] = useState({});
   const navigate = useNavigate();
 
   const submitHandler = (e) => {
