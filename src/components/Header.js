@@ -19,10 +19,9 @@ export default function Header() {
       <Navbar expand="md" className="">
         <Container fluid id="container">
           <Navbar.Toggle
-            className="dropdown dropdown-1"
+            className="dropdown dropdown-1 border-0 col-sm-3"
             aria-controls="navbarScroll"
             id="nav-toggler"
-            className="border-0 col-sm-3"
           >
             <img
               src="images/menuToggle.svg"
